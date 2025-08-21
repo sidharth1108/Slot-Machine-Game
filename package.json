@@ -1,0 +1,35 @@
+{
+  "name": "project-",
+  "version": "1.0.0",
+  "main": "slotmachine.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "comp": "tsc src/game.ts",
+    "trial": "tsc trial.ts",
+    "bundle": "node build.js",
+    "unit-test": "ts-node unit-test.ts",
+    "zip": "cd ./dist/src && zip -r handler.zip handler.js",
+    "deploy": "aws lambda update-function-code --function-name slot-machine --zip-file fileb://./dist/src/handler.zip "
+  },
+  "browser": {
+    "crypto": false
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "@types/request": "^2.48.12",
+    "axios": "^1.7.2",
+    "request": "^2.88.2",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1646.0",
+    "dotenv": "^17.2.1",
+    "esbuild": "^0.21.5",
+    "http": "^0.0.1-security",
+    "typescript": "^5.5.2"
+  }
+}

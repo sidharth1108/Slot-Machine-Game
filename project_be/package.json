@@ -1,0 +1,31 @@
+{
+  "name": "project-",
+  "version": "1.0.0",
+  "main": "slotmachine.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "comp": "tsc src/game.ts",
+    "trial": "tsc trial.ts",
+    "bundle": "node build.js",
+    "unit-test": "ts-node ./unit-test.ts",
+    "zip": "cd ./dist/src && zip -r handler2.zip handler2.js",
+    "deploy": "aws lambda update-function-code --function-name slotmachine --zip-file fileb://./dist/src/handler.zip ",
+    "deployacc": "aws lambda update-function-code --function-name slotmachine_acc --zip-file fileb://./dist/src/handler2.zip"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^20.14.8",
+    "request": "^2.88.2",
+    "ts-node": "^10.9.2",
+    "uninstall": "^0.0.0"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.602.0",
+    "@aws-sdk/lib-dynamodb": "^3.602.0",
+    "aws-sdk": "^2.1648.0",
+    "esbuild": "^0.21.5"
+  }
+}

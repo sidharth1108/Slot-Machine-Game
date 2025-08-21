@@ -10,6 +10,7 @@ This project is a **Slot Machine Game** built using AWS Lambda, DynamoDB and API
 - Implements **sign-up/sign-in functionality** using **DynamoDB**.
 - Handles **game logic and random reward generation**.
 - Backend deployed via **AWS Lambda** with API Gateway integration.
+- The backend file is available for reference
 
 ### Frontend
 - Simple and interactive **UI for the slot machine game**, with user/account management
